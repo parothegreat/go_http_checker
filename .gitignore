@@ -1,3 +1,4 @@
 checkstatus
 .cache/
 vendor/
+http-check
