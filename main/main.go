@@ -66,7 +66,7 @@ func main() {
 	fmt.Println("--- Check Results ---")
 	for res := range results {
 		if res.Error != nil {
-			fmt.Printf("❌ %s: ERROR -> %v\n", res.URL, res.Error)
+			fmt.Printf("%s: ERROR -> %v\n", res.URL, res.Error)
 			continue
 		}
 
