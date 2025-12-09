@@ -41,4 +41,8 @@ if err != nil {
 	} else {
 		result = fmt.Sprintf("Unrecognized status: %d %s", statusCode, statusText)
 	}
+	
+	fmt.Println("----------------------------------")
+	fmt.Println(result)
+	fmt.Println("----------------------------------")
 }
