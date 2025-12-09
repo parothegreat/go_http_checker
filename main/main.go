@@ -19,4 +19,15 @@ func main() {
 	}
 fmt.Printf("Checking: %s\n", url)
 resp, err := http.Get(url)
+
+if err != nil {
+		fmt.Printf("Failed to request (URL not valid or network issues): %s\n", err)
+		return
+	}
+	defer resp.Body.Close()
+
+	statusCode := resp.StatusCode
+	statusText := resp.Status
+
+	
 }
