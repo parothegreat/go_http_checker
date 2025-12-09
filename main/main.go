@@ -29,5 +29,16 @@ if err != nil {
 	statusCode := resp.StatusCode
 	statusText := resp.Status
 
-	
+	result := ""
+	if statusCode >= 200 && statusCode < 300 {
+		result = fmt.Sprintf("OK: %d %s", statusCode, statusText)
+	} else if statusCode >= 300 && statusCode < 400 {
+		result = fmt.Sprintf("Redirect: %d %s", statusCode, statusText) 
+	} else if statusCode >= 400 && statusCode < 500 {
+		result = fmt.Sprintf("Client Error: %d %s", statusCode, statusText) 
+	} else if statusCode >= 500 {
+		result = fmt.Sprintf("Server Error: %d %s", statusCode, statusText) 
+	} else {
+		result = fmt.Sprintf("Unrecognized status: %d %s", statusCode, statusText)
+	}
 }
