@@ -4,7 +4,7 @@ A high-performance command-line interface (CLI) tool written in Go (Golang) for 
 
 ---
 
-## ✨ Features
+##  Features
 
 * **Concurrent Checking:** Utilizes Goroutines to perform HTTP requests simultaneously, significantly reducing total check time.
 * **Status Classification:** Categorizes results into Success (2xx), Client Error (4xx), Server Error (5xx), and Network Errors/Timeouts.
@@ -12,7 +12,7 @@ A high-performance command-line interface (CLI) tool written in Go (Golang) for 
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 Before running this application, ensure you have the following installed:
 
@@ -21,7 +21,7 @@ Before running this application, ensure you have the following installed:
 
 ---
 
-## 🛠️ Installation and Usage
+##  Installation and Usage
 
 ### 1. Clone the Repository
 
