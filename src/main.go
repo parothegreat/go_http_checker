@@ -45,6 +45,23 @@ func checkURL(url string, results chan<- Result, wg *sync.WaitGroup) {
 }
 
 func main() {
+	fileName:=- flag.String("file", "", "File path containing URLs (One URL per line")
+	timeoutSeconds := flag.Int("timeout", 5, "Connection timeout in seconds.")
+
+	flag.Parse()
+	
+	var urls []string
+
+	if *fileName != ""{
+		var err error
+		urls, err = readURLsFromFile(*fileName)
+        
+        if err != nil {
+            fmt.Printf("Failed to read file: %v\n", err)
+            os.Exit(1)
+		}
+		fmt.Printf("Loaded %d URLs from files")
+	}
 	urls := []string{
 		"https://google.com",
 		"https://medium.com",
