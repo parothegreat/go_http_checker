@@ -60,16 +60,17 @@ func main() {
             fmt.Printf("Failed to read file: %v\n", err)
             os.Exit(1)
 		}
-		fmt.Printf("Loaded %d URLs from files")
-	}
-	urls := []string{
+		fmt.Printf("Loaded %d URLs from file: %s\n", len(urls), *fileName)
+
+	} else {
+		fmt.Println("No file path specified. Using default hardcoded URLs.")
+	    urls := []string{
 		"https://google.com",
-		"https://medium.com",
 		"https://github.com/non-existent-page-404",
-		"http://192.0.2.1:80", 
-		"https://go.dev",
-		"https://example.com/status/500", // Placeholder for a slow or error site
+		"http://192.0.2.1:80",
 	}
+	 
+ }  
 
 	results := make(chan Result)
 	var wg sync.WaitGroup
