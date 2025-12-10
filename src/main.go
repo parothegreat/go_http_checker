@@ -45,7 +45,7 @@ func checkURL(url string, results chan<- Result, wg *sync.WaitGroup) {
 }
 
 func main() {
-	fileName:=- flag.String("file", "", "File path containing URLs (One URL per line")
+	fileName:= flag.String("file", "", "File path containing URLs (One URL per line")
 	timeoutSeconds := flag.Int("timeout", 5, "Connection timeout in seconds.")
 
 	flag.Parse()
