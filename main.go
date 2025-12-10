@@ -72,11 +72,11 @@ func main() {
 
 		status := ""
 		if res.StatusCode >= 200 && res.StatusCode < 300 {
-			status = "✅ OK"
+			status = "OK"
 		} else if res.StatusCode >= 400 && res.StatusCode < 500 {
-			status = "⚠️ Client Error"
+			status = "Client Error"
 		} else if res.StatusCode >= 500 {
-			status = "❌ Server Error"
+			status = "Server Error"
 		} else {
 			status = "➡️ Other"
 		}
