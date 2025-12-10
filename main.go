@@ -78,7 +78,7 @@ func main() {
 		} else if res.StatusCode >= 500 {
 			status = "Server Error"
 		} else {
-			status = "➡️ Other"
+			status = "Other"
 		}
 
 		fmt.Printf("%s %s (%d %s)\n", status, res.URL, res.StatusCode, res.StatusText)
