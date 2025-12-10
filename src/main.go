@@ -68,6 +68,8 @@ func main() {
 		"https://google.com",
 		"https://github.com/non-existent-page-404",
 		"http://192.0.2.1:80",
+		"http://192.168.9.10:80",
+		"https://cloud.itmivhs.net",
 	}
 	 
  }  
