@@ -57,7 +57,7 @@ func main() {
 	results := make(chan Result)
 	var wg sync.WaitGroup
 
-	fmt.Println("🚀 Starting concurrent checks...")
+	fmt.Println("Starting concurrent checks...")
 
 	for _, url := range urls {
 		wg.Add(1)
