@@ -1,11 +1,11 @@
 package main
 
 import (
-	//flag
+	//flags
 	"fmt"
 	"flag"
 	"bufio"
-	//other package
+	//other packages
 	"strings"
 	"os"
 	"net/http"
